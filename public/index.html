@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Todo Manager</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="/reset.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="todo">
+  <h1>Todo Manager</h1>
+  <div class="todo-form">
+    <form action="/todos">
+      <div class="form-wrapper">
+        <input id="textArea" type="text">
+      </div>
+      <input id="createBtn" type="submit">
+    </form>
+  </div>
+  <div>
+    <ul id="todoList" class="todo-list">
+    </ul>
+  </div>
+  <script type="module" src="js/main.mjs"></script>
+</body>
+
+</html>

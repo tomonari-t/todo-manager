@@ -1,0 +1,99 @@
+body {
+    background-color: rgb(255, 90, 98);
+    font-family:'Lucida Grande', Meiryo, sans-serif;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+   }
+   
+   .todo {
+    position: relative;
+    margin: 100px;
+   }
+   
+   .todo h1 {
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    font-size: 30px;
+    font-weight: 100;
+    top: -40px;
+    width: 100%;
+    text-align: center;
+   }
+
+   .todo-form {
+        text-align: center;
+   }
+
+   .todo-form input {
+       display: block;
+       width: 100%;
+       border-radius: 3px;
+       height: 40px;
+       font-size: 24px;
+       padding: 5px;
+   }
+
+   .todo-form input[type=submit] {
+       width: 100px;
+       display: block;
+       margin: 0 auto;
+
+   }
+
+   .todo .form-wrapper {
+       padding: 25px;
+   }
+   
+   .todo .new-todo {
+    position: relative;
+    margin: 0;
+    width: 70%;
+    font-size: 20px;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: 1.4em;
+    padding: 5px;
+   }
+   
+   .todo .new-todo-button {
+    margin: 0;
+    width: 20%;
+    font-size: 20px;
+    background-color: blue;
+    color: white;
+   }
+   
+   .todo-list {
+
+   }
+   
+   .todo-view {
+    margin-top: 10px;
+    background-color: #f5f5f5;
+   }
+
+   .todo-list__item {
+       padding: 10px 0;
+   }
+   
+   input[type=checkbox] {
+
+   }
+   
+   .todo-view input[type=checkbox] {
+    display: inline-block;
+    margin-right: 6px;
+   }
+   
+   .todo-view input[type=checkbox] + label {
+    position: relative;
+    display: inline-block;
+    margin-right: 12px;
+    font-size: 20px;
+    cursor: pointer;
+   }
+   
+   .checkbox-label {
+    width: 500px;
+   }

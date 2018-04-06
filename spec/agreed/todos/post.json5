@@ -1,0 +1,25 @@
+{
+  request: {
+    path: '/todos/',
+    method: 'POST',
+    body: {
+      content: '{:content}'
+    },
+    values: {
+      content: 'buy a milk'
+    }
+  },
+  response: {
+    status: 201,
+    body: {
+      id: '{:id}',
+      content: '{:content}',
+      done: '{:done}'
+    },
+    values: {
+      id: 1,
+      content: 'buy a milk',
+      done: false
+    }
+  },
+}

@@ -1,0 +1,39 @@
+{
+  request: {
+    path: '/todos/',
+    method: 'GET',
+  },
+  response: {
+    status: 200,
+    body: {
+      todos: [
+        {
+          id: '{:todos.0.id}',
+          content: '{:todos.0.content}',
+          done: '{:todos.0.done}'
+        },
+        '{:todos.1-last}'
+      ]
+    },
+    values: {
+      todos: [
+        {
+          id: 1,
+          content: 'buy milk',
+          done: false
+        },
+        {
+          id: 2,
+          content: 'buy beer',
+          done: true
+        },
+        {
+          id: 3,
+          content: 'buy peanuts',
+          done: false
+        },
+      ]
+    }
+  },
+}
+
