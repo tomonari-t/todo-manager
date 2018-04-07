@@ -4,7 +4,6 @@ export default class ItemListView {
     constructor(ctr) {
         const self = this;
         this.controller = ctr;
-        this.todos = [];
         this.$textArea = $('#textArea');
         this.$submitBtn = $('#createBtn');
         this.$listWrapper = $('#todoList');
@@ -19,7 +18,6 @@ export default class ItemListView {
 
     addItem(task) {
         const item = new ItemView(this.controller, task);
-        this.todos.push(item);
         this.$listWrapper.append(item.getDom());
     }
 
