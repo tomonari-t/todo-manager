@@ -22,8 +22,8 @@ export default class ItemView {
 
         const $checkBox = self.$dom.find('.itemCheckBox');
         $checkBox.click(async function () {
-            const isDone = $checkBox.prop('checked');
-            const modifiedTask = await self.controller.modifyItem(self.id, self.content, isDone);
+            self.done = $checkBox.prop('checked');
+            const modifiedTask = await self.controller.modifyItem(self.id, self.content, self.done);
             self.done = modifiedTask.done;
             self._render();
         });
@@ -50,6 +50,7 @@ export default class ItemView {
 
     _render() {
         this._modifyContent();
+        this.$dom.find('.itemCheckBox').prop('checked', this.done);
         if (this.done) {
             this._checkItem();
         } else {
@@ -62,10 +63,10 @@ export default class ItemView {
     }
 
     _checkItem() {
-        this.$dom.find('.itemCheckBox').css('text-decoration', 'line-through');
+        this.$dom.find('.itemTitle').css('text-decoration', 'line-through');
     }
 
     _unCheckItem() {
-        this.$dom.find('.itemCheckBox').css('text-decoration', 'none');
+        this.$dom.find('.itemTitle').css('text-decoration', 'none');
     }
 }

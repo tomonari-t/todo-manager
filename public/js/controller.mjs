@@ -21,6 +21,7 @@ export default class TodoController {
 
     async modifyItem(id, content, done) {
         const task = await this.model.modifyTask(id, content, done);
+        console.log(task);
         return task
     }
 

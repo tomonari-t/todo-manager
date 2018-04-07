@@ -1,4 +1,3 @@
-
 const express = require('express');
 const router = express.Router();
 const todos = [];
@@ -15,21 +14,20 @@ router.post('/', (req, res, next) => {
 });
 
 router.get('/', (req, res, next) => {
-    return res.send({ todos: todos });
+    return res.send({
+        todos: todos
+    });
 });
 
-router.patch('/:id', (req, res, next) => {
+router.put('/:id', (req, res, next) => {
     const id = req.params.id;
     const todo = todos.find((todo) => todo.id == id);
     const content = req.body.content;
     const done = req.body.done;
-    if (content) {
-        todo.content = content;
-        return res.status(201).send(todo);
-    } else {
-        todo.done = done;
-        return res.status(201).send(todo);
-    }
+    todo.content = content;
+    todo.done = done;
+    return res.status(201).send(todo);
+
 });
 
 router.delete('/:id', (req, res, next) => {

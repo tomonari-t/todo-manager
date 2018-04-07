@@ -6,7 +6,7 @@
   "scripts": {
     "test": "ava --save-dev",
     "start-dev": "agreed-server --path ./spec/agreed/entry.js --port 8080 --static ./public",
-    "start": "node app.js",
+    "start": "node backend/app.js",
     "api:list": "agreed-ui --path ./spec/agreed/entry.js --port 8000",
     "deploy": "now",
     "alias": "now ln"

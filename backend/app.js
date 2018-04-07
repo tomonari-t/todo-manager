@@ -10,7 +10,9 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../public'));
 console.log(__dirname + '../public');
 app.use('/todos', todoRouter);
-app.use(logger({path: "./logfile.txt"}));
+app.use(logger({
+    path: "./logfile.txt"
+}));
 
 app.listen(PORT, () => {
     console.log('listne');
